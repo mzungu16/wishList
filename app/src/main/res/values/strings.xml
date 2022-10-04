@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">WishList</string>
+    <string name="search">search</string>
+    <string name="extended_fab_label">create group</string>
+    <string name="add_smth">Add smth</string>
+    <string name="add_wish">Add wish</string>
+    <string name="add_group">Add group</string>
 </resources>
