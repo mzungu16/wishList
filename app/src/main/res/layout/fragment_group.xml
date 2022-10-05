@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nested_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:paddingHorizontal="@dimen/grid_0_5"
+    android:paddingTop="@dimen/grid_1">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/group_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/compose_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/grid_2">
+
+            <ImageButton
+                android:id="@+id/close_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/grid_1"
+                android:background="?attr/actionBarItemBackground"
+                android:contentDescription="@string/compose_close_content_desc"
+                android:padding="@dimen/min_icon_target_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_close"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/subject_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/grid_2"
+                android:background="@android:color/transparent"
+                android:hint="@string/topic"
+                android:minHeight="@dimen/min_touch_target_size"
+                android:paddingVertical="@dimen/grid_1"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/send_icon"
+                app:layout_constraintStart_toEndOf="@id/close_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/send_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/grid_1"
+                android:background="?attr/actionBarItemBackground"
+                android:clickable="true"
+                android:contentDescription="@string/compose_send_content_desc"
+                android:focusable="true"
+                android:padding="@dimen/min_icon_target_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_ready"
+                app:tint="?attr/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/subject_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/grid_2"
+                android:layout_marginTop="@dimen/grid_1"
+                android:background="@drawable/divider"
+                app:backgroundTint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subject_edit_text" />
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/grid_2"
+                android:background="@android:color/transparent"
+                android:hint="@string/add_title"
+                android:minHeight="@dimen/min_touch_target_size"
+                android:paddingVertical="@dimen/grid_1"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subject_divider" />
+
+            <ImageView
+                android:id="@+id/subject_divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/grid_2"
+                android:layout_marginTop="@dimen/grid_1"
+                android:background="@drawable/divider"
+                app:backgroundTint="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/grid_2"
+                android:layout_marginTop="@dimen/grid_2"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="@string/compose_body_hint"
+                android:minHeight="200dp"
+                android:paddingBottom="@dimen/grid_4"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subject_divider2"
+                app:lineHeight="24sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:id="@+id/wallpaper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    />
+                <Button
+                    android:id="@+id/choose_picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/choose_picture"/>
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.core.widget.NestedScrollView>

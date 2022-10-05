@@ -45,6 +45,7 @@
             app:layout_behavior="com.google.android.material.transformation.FabTransformationScrimBehavior">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/add_group"
@@ -52,6 +53,7 @@
                 app:srcCompat="@drawable/ic_add_group" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_wish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/add_wish"

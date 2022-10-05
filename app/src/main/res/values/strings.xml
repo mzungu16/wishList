@@ -12,4 +12,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="content_description_media">Wallpaper picture</string>
     <string name="title">Title</string>
+
+    <!--ComposeFragment-->
+    <string name="compose_close_content_desc">Close editing email</string>
+    <string name="compose_send_content_desc">Send email</string>
+    <string name="compose_add_recipient_icon_content_desc">Add recipient</string>
+    <string name="topic">Group info</string>
+    <string name="add_title">Title</string>
+    <string name="compose_body_hint">New description…</string>
+    <string name="compose_recipient_group_content_desc">Recipients</string>
+    <string name="choose_picture">Choose picture</string>
 </resources>
